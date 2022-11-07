@@ -1,4 +1,4 @@
-export interface People{
+export interface Species{
     name: string,
     classification: string,
     designation: string,
