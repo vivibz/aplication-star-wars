@@ -1,5 +1,5 @@
 export interface Films{
-    tittle: string,
+    title: string,
     episode_id: number,
     opening_crawl: string,
     director: string,
