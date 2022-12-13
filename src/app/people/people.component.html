@@ -1,0 +1,21 @@
+<main class="bg-gray-900 w-1/2 p-4 mx-auto h-full "> <!--criar class única-->
+    <div class="flex flex-wrap">
+        <section *ngFor=" let people of receivePeople" class="w-full">
+            <div class="styles-cards">
+                <div class="mx-2 p-2">
+                    <span class="text-bold">Name: </span>
+                    <span>{{people.name}}</span>
+                    <p class="text-bold">Height: <span class="text-normal">{{people.height}}</span></p>
+                    <p class="text-bold">Mass: <span class="text-normal">{{people.mass}}</span></p>
+                    <p class="text-bold">Hair Color: <span class="text-normal">{{people.hair_color}}</span></p>
+                    <p class="text-bold">Skin Color: <span class="text-normal">{{people.skin_color}}</span></p>
+                    <p class="text-bold">Eye Color: <span class="text-normal">{{people.eye_color}}</span></p>
+                    <p class="text-bold">Birth Year: <span class="text-normal">{{people.birth_year}}</span></p>
+                    <p class="text-bold">Gender: <span class="text-normal">{{people.gender}}</span></p>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+<!-- adicionar imagens -->

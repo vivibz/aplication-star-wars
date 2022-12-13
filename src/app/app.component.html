@@ -1,2 +1,30 @@
+<div class=" sm:block flex ">
+    <span class="flex mx-60 ">
+        <img src="../assets/img/star-wars-4.svg" class="mx-auto mt-4 mb-5 sm:max-w-sm md:max-w-sm lg:max-w-lg" >  <!--Corrgir responsividade: imagem só fica respos ao tocar na borda do lado esquerdo []-->
+    </span>
+</div>
 
-<app-nav-bar></app-nav-bar>
+
+<nav class="bg-gray-500 mx-4 py-4 " > 
+        <ul class="flex justify-center space-x-20  ">   <!--adicionar active e focus na nav-bar-->
+        <li>
+            <a routerLink="" class="text-black-600 hover:bg-blue-500 px-3 py-2 rounded-2xl">Home</a>
+        </li>
+        <li>
+            <a routerLink="/species" class="text-black-600 hover:bg-blue-500 px-3 py-2 rounded-2xl">Species</a>
+        </li>
+        <li>
+            <a routerLink="/films" class="text-black-600 hover:bg-blue-500 px-3 py-2 rounded-2xl">Films</a>
+        </li>
+        <li>
+            <a routerLink="/people" class="text-black-600 hover:bg-blue-500 px-3 py-2 rounded-2xl">People</a>
+        </li>
+        <li>
+            <a routerLink="/planets" class="text-black-600 hover:bg-blue-500 px-3 py-2 rounded-2xl">Planets</a>
+        </li>
+        
+    </ul>
+</nav>
+<div>
+    <router-outlet></router-outlet>
+</div>

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-// import { HttpClient } from '@angular/common/http';
+import { Component } from '@angular/core';
+import { ServiceService } from './shared/services/service.service';
 
 @Component({
   selector: 'app-root',
@@ -8,12 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent  {   // implements OnInit
   title = 'aplication-star-wars';
-  // titule : string = ''
 
-  // constructor(private _httpClient: HttpClient) {
 
-  // }
-  // ngOnInit(): void {
-  //   this._httpClient.get("https://swapi.dev/documentation")
-  // }
-}
+   constructor( ) {}
+
+
+
+  }
