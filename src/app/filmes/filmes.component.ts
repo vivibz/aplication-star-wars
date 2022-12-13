@@ -23,7 +23,6 @@ export class FilmesComponent implements OnInit {
   getFilms() {
     this.filmsService.getFilms('films').subscribe( data => {
       this.receiveMovies = data.results;
-      console.log(this.receiveMovies);
     });
   }
 

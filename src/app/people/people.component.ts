@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { People } from '../shared/interface/IPeople';
+import { ServiceService } from '../shared/services/service.service';
 
 @Component({
   selector: 'app-people',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PeopleComponent implements OnInit {
 
-  constructor() { }
+
+  receivePeople: People[] = [];
+
+  constructor( 
+    private peopleService: ServiceService
+    ) {}
 
   ngOnInit(): void {
+    this.getPeople()
+  }
+
+  getPeople() {
+    this.peopleService.getPeople('people').subscribe(dataPeople =>{
+      this.receivePeople = dataPeople.results;
+      console.log(this.receivePeople)
+    })
   }
 
 }

@@ -5,4 +5,18 @@
 body {
     background-color: #111111;
 }
+
+@layer components {
+    .text-bold {
+        @apply font-bold
+    }
+
+    .text-normal {
+        @apply font-normal
+    }
+
+    .styles-cards {
+        @apply text-slate-300 bg-slate-500 w-3/4 m-3 p-3 rounded-3xl
+    }
+}
 /* You can add global styles to this file, and also import other style files */

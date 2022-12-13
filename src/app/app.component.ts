@@ -10,7 +10,7 @@ export class AppComponent  {   // implements OnInit
   title = 'aplication-star-wars';
 
 
-   constructor(private _starWarsAll: ServiceService ) {}
+   constructor( ) {}
 
 
 

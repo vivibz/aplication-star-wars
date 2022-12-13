@@ -9,9 +9,9 @@ import { SpeciesComponent } from "./species/species.component";
 
 const APP_ROUTES: Routes = [
     { path: '', component: HomeComponent},
-    { path: 'filmes', component: FilmesComponent},
-    { path: 'especies', component: SpeciesComponent},
-    { path: 'planetas', component: PlanetsComponent},
+    { path: 'films', component: FilmesComponent},
+    { path: 'species', component: SpeciesComponent},
+    { path: 'planets', component: PlanetsComponent},
     { path: 'people', component: PeopleComponent},
 ];
 

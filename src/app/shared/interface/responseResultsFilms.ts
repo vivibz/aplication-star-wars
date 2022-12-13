@@ -1,3 +1,15 @@
 export interface ResultsFilms{
-    results: any[]
+    results: any[];
+}
+
+export interface ResultsPeople{
+    results: any[];
+}
+
+export interface ResultsPlanets{
+    results: any[];
+}
+
+export interface ResultsSpecies{
+    results: any[];
 }
