@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Species } from '../shared/interface/ISpecies';
+import { ServiceService } from '../shared/services/service.service';
 
 @Component({
   selector: 'app-species',
@@ -7,9 +9,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SpeciesComponent implements OnInit {
 
-  constructor() { }
+  receiveSpecies: Species[] = [];
+
+  constructor(
+    private speciesService: ServiceService
+  ) { }
 
   ngOnInit(): void {
+    this.getSpecies();
   }
+
+  getSpecies() {
+    this.speciesService.getSpecies().subscribe( dataSpecies => {
+      this.receiveSpecies = dataSpecies.results;
+    })
+  }
+
+
+
+  // getPeople() {
+  //   this.peopleService.getPeople('people').subscribe(dataPeople =>{
+  //     this.receivePeople = dataPeople.results;
+  //     console.log(this.receivePeople)
+  //   })
+  // }
 
 }
