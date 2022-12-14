@@ -24,14 +24,4 @@ export class SpeciesComponent implements OnInit {
       this.receiveSpecies = dataSpecies.results;
     })
   }
-
-
-
-  // getPeople() {
-  //   this.peopleService.getPeople('people').subscribe(dataPeople =>{
-  //     this.receivePeople = dataPeople.results;
-  //     console.log(this.receivePeople)
-  //   })
-  // }
-
 }

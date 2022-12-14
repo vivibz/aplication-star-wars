@@ -1,1 +1,19 @@
-<p>planets works!</p>
+<main class="bg-gray-900 w-1/2 p-4 mx-auto h-full "> <!--criar class única-->
+    <div class="flex flex-wrap">
+        <section *ngFor=" let planets of receivePlanets" class="w-full">
+            <div class="styles-cards">
+                <div class="mx-2 p-2">
+                    <p class="text-bold">Name: <span class="text-normal">{{planets.name}}</span></p>
+                    <p class="text-bold">Rotation Period: <span class="text-normal">{{planets.rotation_period}}</span></p>
+                    <p class="text-bold">Orbital Period: <span class="text-normal">{{planets.orbital_period}}</span></p>
+                    <p class="text-bold">Diameter: <span class="text-normal">{{planets.diameter}}</span></p>
+                    <p class="text-bold">Climate: <span class="text-normal">{{planets.climate}}</span></p>
+                    <p class="text-bold">Gravity: <span class="text-normal">{{planets.gravity}}</span></p>
+                    <p class="text-bold">Terrain: <span class="text-normal">{{planets.terrain}}</span></p>
+                    <p class="text-bold">Surface Water: <span class="text-normal">{{planets.surface_water}}</span></p>
+                    <p class="text-bold">Population: <span class="text-normal">{{planets.population}}</span></p>
+                </div> 
+            </div>
+        </section>
+    </div>
+</main>
