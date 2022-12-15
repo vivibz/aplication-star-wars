@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-    background-color: #111111;
+    background: #000;
 }
 
 @layer components {
@@ -18,5 +18,10 @@ body {
     .styles-cards {
         @apply text-slate-300 bg-slate-500 w-3/4 m-3 p-3 rounded-3xl
     }
+
+    .style-text-navbar {
+        @apply text-gray-400 text-lg font-mono hover:text-2xl hover:text-white px-3 py-2 rounded-2xl 
+    }
+
 }
 /* You can add global styles to this file, and also import other style files */

@@ -1,26 +1,35 @@
 <div class=" sm:block flex ">
-    <span class="flex mx-60 ">
-        <img src="../assets/img/star-wars-4.svg" class="mx-auto mt-4 mb-5 sm:max-w-sm md:max-w-sm lg:max-w-lg" >  <!--Corrgir responsividade: imagem só fica respos ao tocar na borda do lado esquerdo []-->
+    <span class=" mx-auto ">
+        <div class="">
+            <img src="../assets/img/star-wars-4.svg" class="mx-auto mt-4 mb-5 sm:max-w-sm md:max-w-sm lg:max-w-xs" >  <!--Corrgir responsividade: imagem só fica respos ao tocar na borda do lado esquerdo []-->
+            <span class="flex flex-row-reverse mr-6 relative">
+                <input type="text" name="search" >
+            </span>
+        </div>
+        
     </span>
+    
+    
 </div>
 
 
-<nav class="bg-gray-500 mx-4 py-4 " > 
-        <ul class="flex justify-center space-x-20  ">   <!--adicionar active e focus na nav-bar-->
+
+<nav class="bg-black max-h-full py-4 flex-auto" > 
+        <ul class="flex justify-center space-x-20  border-b-2 border-gray-500">   <!--adicionar active e focus na nav-bar-->
         <li>
-            <a routerLink="" class="text-black-600 hover:bg-blue-500 px-3 py-2 rounded-2xl">Home</a>
+            <a routerLink="" class="style-text-navbar text-bold">HOME</a>
         </li>
         <li>
-            <a routerLink="/species" class="text-black-600 hover:bg-blue-500 px-3 py-2 rounded-2xl">Species</a>
+            <a routerLink="/species" class="style-text-navbar text-bold">SPECIES</a>
         </li>
         <li>
-            <a routerLink="/films" class="text-black-600 hover:bg-blue-500 px-3 py-2 rounded-2xl">Films</a>
+            <a routerLink="/films" class="style-text-navbar text-bold">FILMS</a>
         </li>
         <li>
-            <a routerLink="/people" class="text-black-600 hover:bg-blue-500 px-3 py-2 rounded-2xl">People</a>
+            <a routerLink="/people" class="style-text-navbar text-bold">PEOPLE</a>
         </li>
         <li>
-            <a routerLink="/planets" class="text-black-600 hover:bg-blue-500 px-3 py-2 rounded-2xl">Planets</a>
+            <a routerLink="/planets" class="style-text-navbar text-bold">PLANETS</a>
         </li>
         
     </ul>
