@@ -4,20 +4,25 @@
 
 body {
     background: #000;
+    
 }
 
 @layer components {
     .text-bold {
         @apply font-bold
     }
+    
+    .bg-title-page {
+        @apply bg-gray-900 w-3/5 p-5 mx-auto grid gap-16 grid-cols-2 grid-rows-3 px-12 py-7
+    }
 
     .text-normal {
         @apply font-normal
     }
 
-    .styles-cards {
-        @apply text-slate-300 bg-slate-500 w-3/4 m-3 p-3 rounded-3xl
-    }
+   .styles-cards {
+        @apply  pt-16 max-w-md bg-white rounded-xl shadow-lg sm:space-y-0 sm:space-x-6
+   }
 
     .style-text-navbar {
         @apply text-gray-400 text-lg font-mono hover:text-2xl hover:text-white px-3 py-2 rounded-2xl 

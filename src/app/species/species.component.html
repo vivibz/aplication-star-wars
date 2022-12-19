@@ -1,20 +1,15 @@
-<main class="bg-gray-900 w-1/2 p-4 mx-auto h-full "> <!--criar class única-->
-    <div class="flex flex-wrap">
-        <section *ngFor=" let species of receiveSpecies" class="w-full">
+<main class="bg-title-page"> <!--criar class única-->
+        <div *ngFor=" let species of receiveSpecies" class="w-96">
             <div class="styles-cards">
-                <div class="mx-2 p-2">
-                    <span class="text-bold">Name: </span>
-                    <span>{{species.name}}</span>
-                    <p class="text-bold">Classification: <span class="text-normal">{{species.classification}}</span></p>
-                    <p class="text-bold">Designation: <span class="text-normal">{{species.designation}}</span></p>
-                    <p class="text-bold">Average Height: <span class="text-normal">{{species.average_height}}</span></p>
-                    <p class="text-bold">Skin Color: <span class="text-normal">{{species.skin_colors}}</span></p>
-                    <p class="text-bold">Hair Color: <span class="text-normal">{{species.hair_colors}}</span></p>
-                    <p class="text-bold">Eye Colors: <span class="text-normal">{{species.eye_colors}}</span></p>
-                    <p class="text-bold">Average Lifespan: <span class="text-normal">{{species.average_lifespan}}</span></p>
-                    <p class="text-bold">Language: <span class="text-normal">{{species.language}}</span></p>
-                </div>
+                    <div class="text-bold">Name: <span>{{species.name}}</span></div>
+                    <div class="text-bold">Classification: <span class="text-normal">{{species.classification}}</span></div>
+                    <div class="text-bold">Designation: <span class="text-normal">{{species.designation}}</span></div>
+                    <div class="text-bold">Average Height: <span class="text-normal">{{species.average_height}}</span></div>
+                    <div class="text-bold">Skin Color: <span class="text-normal">{{species.skin_colors}}</span></div>
+                    <div class="text-bold">Hair Color: <span class="text-normal">{{species.hair_colors}}</span></div>
+                    <div class="text-bold">Eye Colors: <span class="text-normal">{{species.eye_colors}}</span></div>
+                    <div class="text-bold">Average Lifespan: <span class="text-normal">{{species.average_lifespan}}</span></div>
+                    <div class="text-bold">Language: <span class="text-normal">{{species.language}}</span></div>
             </div>
-        </section>
-    </div>
+        </div>
 </main>
