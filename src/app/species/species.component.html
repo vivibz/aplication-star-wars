@@ -1,20 +1,43 @@
-<main class="bg-gray-900 w-1/2 p-4 mx-auto h-full "> <!--criar class única-->
-    <div class="flex flex-wrap">
-        <section *ngFor=" let species of receiveSpecies" class="w-full">
-            <div class="styles-cards">
-                <div class="mx-2 p-2">
-                    <span class="text-bold">Name: </span>
-                    <span>{{species.name}}</span>
-                    <p class="text-bold">Classification: <span class="text-normal">{{species.classification}}</span></p>
-                    <p class="text-bold">Designation: <span class="text-normal">{{species.designation}}</span></p>
-                    <p class="text-bold">Average Height: <span class="text-normal">{{species.average_height}}</span></p>
-                    <p class="text-bold">Skin Color: <span class="text-normal">{{species.skin_colors}}</span></p>
-                    <p class="text-bold">Hair Color: <span class="text-normal">{{species.hair_colors}}</span></p>
-                    <p class="text-bold">Eye Colors: <span class="text-normal">{{species.eye_colors}}</span></p>
-                    <p class="text-bold">Average Lifespan: <span class="text-normal">{{species.average_lifespan}}</span></p>
-                    <p class="text-bold">Language: <span class="text-normal">{{species.language}}</span></p>
+<main class="bg-gray-900 w-1/2 p-4 mx-auto grid gap-16 grid-cols-2 grid-rows-3 px-12 py-7"> <!--criar class única-->
+        <section *ngFor=" let species of receiveSpecies" class="w-96">
+            <div class="overflow-hidden bg-white shadow sm:rounded-lg">
+                <div class="px-4 py-5 sm:px-6"> 
+                    <h3 class="text-lg font-medium leading-6 text-gray-900">{{species.name}}</h3> <!--PASSAR TUDO PARA O INGLÊS-->
                 </div>
+                <div class="border-t border-gray-200"></div>
+                <dl> 
+                    <div class="bg-gray-50 px-4 py-5 sm:grid-cols-3 sm:gap-4 sm:px-6">
+                        <dt class="text-sm font-medium text-gray-500">Classification: <span class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{species.classification}}</span></dt>
+                    </div>
+                    <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                        <dt class="text-sm font-medium text-gray-500">Designation: </dt>
+                        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{species.designation}}</dd>
+                    </div>
+                    <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                        <dt class="text-sm font-medium text-gray-500">Average Height: </dt>
+                        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{species.average_height}}</dd>
+                    </div>
+                    <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                        <dt class="text-sm font-medium text-gray-500">Skin Color: </dt>
+                        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{species.skin_colors}}</dd>
+                    </div>
+                    <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                        <dt class="text-sm font-medium text-gray-500">Hair Color: </dt>
+                        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{species.hair_colors}}</dd>
+                    </div>
+                    <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                        <dt class="text-sm font-medium text-gray-500">Eye Colors: </dt>
+                        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{species.eye_colors}}</dd>
+                    </div>
+                    <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                        <dt class="text-sm font-medium text-gray-500">Average Lifespan: </dt>
+                        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{species.average_lifespan}}</dd>
+                    </div>
+                    <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                        <dt class="text-sm font-medium text-gray-500">Language: </dt>
+                        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{species.language}}</dd>
+                    </div>
+                </dl>
             </div>
         </section>
-    </div>
 </main>

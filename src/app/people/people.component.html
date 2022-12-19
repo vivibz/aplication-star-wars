@@ -1,21 +1,41 @@
-<main class="bg-gray-900 w-1/2 p-4 mx-auto h-full "> <!--criar class única-->
-    <div class="flex flex-wrap">
-        <section *ngFor=" let people of receivePeople" class="w-full">
-            <div class="styles-cards">
-                <div class="mx-2 p-2">
-                    <span class="text-bold">Name: </span>
-                    <span>{{people.name}}</span>
-                    <p class="text-bold">Height: <span class="text-normal">{{people.height}}</span></p>
-                    <p class="text-bold">Mass: <span class="text-normal">{{people.mass}}</span></p>
-                    <p class="text-bold">Hair Color: <span class="text-normal">{{people.hair_color}}</span></p>
-                    <p class="text-bold">Skin Color: <span class="text-normal">{{people.skin_color}}</span></p>
-                    <p class="text-bold">Eye Color: <span class="text-normal">{{people.eye_color}}</span></p>
-                    <p class="text-bold">Birth Year: <span class="text-normal">{{people.birth_year}}</span></p>
-                    <p class="text-bold">Gender: <span class="text-normal">{{people.gender}}</span></p>
+<main class="bg-gray-900 w-1/2 p-4 mx-auto grid gap-16 grid-cols-2 grid-rows-3 px-12 py-7"> <!--criar class única-->
+        <section *ngFor=" let people of receivePeople" class="w-96">
+            <div class="overflow-hidden bg-white shadow sm:rounded-lg">
+                <div class="px-4 py-5 sm:px-6"> 
+                    <h3 class="text-lg font-medium leading-6 text-gray-900">{{people.name}}</h3> <!--PASSAR TUDO PARA O INGLÊS-->
                 </div>
+                <div class="border-t border-gray-200"></div>
+                <dl> 
+                    <div class="bg-gray-50 px-4 py-5 sm:grid-cols-3 sm:gap-4 sm:px-6">
+                        <dt class="text-sm font-medium text-gray-500">Height: <span class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{people.height}}</span></dt>
+                    </div>
+                    <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                        <dt class="text-sm font-medium text-gray-500">Mass: </dt>
+                        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{people.mass}}</dd>
+                    </div>
+                    <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                        <dt class="text-sm font-medium text-gray-500">Hair Color: </dt>
+                        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{people.hair_color}}</dd>
+                    </div>
+                    <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                        <dt class="text-sm font-medium text-gray-500">Skin Color: </dt>
+                        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{people.skin_color}}</dd>
+                    </div>
+                    <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                        <dt class="text-sm font-medium text-gray-500">Eye Color: </dt>
+                        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{people.eye_color}}</dd>
+                    </div>
+                    <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                        <dt class="text-sm font-medium text-gray-500">Birth Year: </dt>
+                        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{people.birth_year}}</dd>
+                    </div>
+                    <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                        <dt class="text-sm font-medium text-gray-500">Gender: </dt>
+                        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{people.gender}}</dd>
+                    </div>
+                </dl>
             </div>
         </section>
-    </div>
 </main>
 
 <!-- adicionar imagens -->
