@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { People } from '../shared/interface/IPeople';
 import { ServiceService } from '../shared/services/service.service';
 
@@ -10,7 +10,7 @@ import { ServiceService } from '../shared/services/service.service';
 export class PeopleComponent implements OnInit {
 
 
-  receivePeople: People[] = [];
+  @Output() receivePeople: People[] = [];
 
   constructor( 
     private peopleService: ServiceService
@@ -23,7 +23,6 @@ export class PeopleComponent implements OnInit {
   getPeople() {
     this.peopleService.getPeople('people').subscribe(dataPeople =>{
       this.receivePeople = dataPeople.results;
-      console.log(this.receivePeople)
     })
   }
 
