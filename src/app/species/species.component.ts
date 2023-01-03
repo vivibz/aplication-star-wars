@@ -10,6 +10,7 @@ import { ServiceService } from '../shared/services/service.service';
 export class SpeciesComponent implements OnInit {
 
   receiveSpecies: Species[] = [];
+  searchText: string = '';
 
   constructor(
     private speciesService: ServiceService
@@ -24,4 +25,10 @@ export class SpeciesComponent implements OnInit {
       this.receiveSpecies = dataSpecies.results;
     })
   }
+
+  onSearchTextEntered(searchValue: string) {
+    this.searchText = searchValue;
+    console.log(this.searchText);
+  } 
+
 }

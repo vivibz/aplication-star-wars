@@ -10,6 +10,7 @@ import { ServiceService } from '../shared/services/service.service';
 export class FilmesComponent implements OnInit {
 
   receiveMovies: Films[] = [];
+  searchText: string = '';
 
   constructor( 
     private filmsService: ServiceService
@@ -19,12 +20,15 @@ export class FilmesComponent implements OnInit {
       this.getFilms();
     }
   
-
   getFilms() {
     this.filmsService.getFilms('films').subscribe( data => {
       this.receiveMovies = data.results;
     });
   }
 
- 
+  onSearchTextEntered(searchValue: string) {
+    this.searchText = searchValue;
+    console.log(this.searchText);
+  } 
+
 }

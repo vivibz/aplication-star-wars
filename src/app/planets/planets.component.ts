@@ -10,6 +10,7 @@ import { ServiceService } from '../shared/services/service.service';
 export class PlanetsComponent implements OnInit {
 
   receivePlanets: Planets[] = [];
+  searchText: string = '';
 
   constructor(
     private planetsService : ServiceService
@@ -25,4 +26,10 @@ export class PlanetsComponent implements OnInit {
       this.receivePlanets = dataPlanets.results;
     })
   }
+
+  onSearchTextEntered(searchValue: string) {
+    this.searchText = searchValue;
+    console.log(this.searchText);
+  } 
+
 }
