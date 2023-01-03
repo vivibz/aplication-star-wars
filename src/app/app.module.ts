@@ -10,8 +10,9 @@ import { SpeciesComponent } from './species/species.component';
 import { PeopleComponent } from './people/people.component';
 import { PlanetsComponent } from './planets/planets.component';
 import { routing } from './app.routing';
+import { SearchComponent } from './search/search.component';
+import { FormsModule } from '@angular/forms';
 
-let routes
 
 @NgModule({
   declarations: [
@@ -21,12 +22,15 @@ let routes
     FilmesComponent,
     SpeciesComponent,
     PeopleComponent,
-    PlanetsComponent
+    PlanetsComponent,
+    SearchComponent,
+  
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
-    routing
+    routing,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

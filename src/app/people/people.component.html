@@ -1,13 +1,16 @@
-<main class="bg-gray-900 w-1/2 p-4 mx-auto grid gap-16 grid-cols-2 grid-rows-3 px-12 py-7"> <!--criar class única-->
-        <section *ngFor=" let people of receivePeople" class="w-96">
-            <div class="overflow-hidden bg-white shadow sm:rounded-lg">
-                <div class="px-4 py-5 sm:px-6"> 
-                    <h3 class="text-lg font-medium leading-6 text-gray-900">{{people.name}}</h3> <!--PASSAR TUDO PARA O INGLÊS-->
-                </div>
-                <div class="border-t border-gray-200"></div>
+<app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search>
+<main class="bg-gray-900 w-3/5 p-5 mx-auto flex flex-wrap justify-between px-16 py-7"> <!--criar class única-->
+        <section *ngFor=" let people of receivePeople" class="pt-3 p-4">
+            <div class="overflow-hidden bg-white shadow sm:rounded-lg" *ngIf="searchText === '' || people.name.toLowerCase().includes(searchText)">  
                 <dl> 
+                    <div class="px-4 py-5 sm:px-6"> 
+                        <h3 class="text-lg font-medium leading-6 text-gray-900">{{people.name}}</h3>
+                    </div>
+
+                    <div class="border-t border-gray-200"></div>
+
                     <div class="bg-gray-50 px-4 py-5 sm:grid-cols-3 sm:gap-4 sm:px-6">
-                        <dt class="text-sm font-medium text-gray-500">Height: <span class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{people.height}}</span></dt>
+                        <dt class="text-sm font-medium text-gray-500">Height: <span class="mt-1 px-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{people.height}}</span></dt>
                     </div>
                     <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                         <dt class="text-sm font-medium text-gray-500">Mass: </dt>

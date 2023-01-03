@@ -11,6 +11,7 @@ export class PeopleComponent implements OnInit {
 
 
   @Output() receivePeople: People[] = [];
+  searchText: string = '';
 
   constructor( 
     private peopleService: ServiceService
@@ -25,5 +26,10 @@ export class PeopleComponent implements OnInit {
       this.receivePeople = dataPeople.results;
     })
   }
+
+  onSearchTextEntered(searchValue: string) {
+    this.searchText = searchValue;
+  } 
+
 
 }

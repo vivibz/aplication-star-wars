@@ -1,6 +1,7 @@
-<main class="bg-gray-900 w-1/2 p-4 mx-auto grid gap-16 grid-cols-2 grid-rows-3 px-12 py-7"> <!--criar class única-->
-        <section *ngFor=" let species of receiveSpecies" class="w-96">
-            <div class="overflow-hidden bg-white shadow sm:rounded-lg">
+<app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search>
+<main class="bg-gray-900 w-3/5 p-4 mx-auto flex flex-wrap justify-between px-16 py-7"> <!--criar class única-->
+        <section *ngFor=" let species of receiveSpecies" class="pt-3 p-4">
+            <div class="overflow-hidden bg-white shadow sm:rounded-lg" *ngIf="searchText === '' || species.name.toLowerCase().includes(searchText)">
                 <div class="px-4 py-5 sm:px-6"> 
                     <h3 class="text-lg font-medium leading-6 text-gray-900">{{species.name}}</h3> <!--PASSAR TUDO PARA O INGLÊS-->
                 </div>
