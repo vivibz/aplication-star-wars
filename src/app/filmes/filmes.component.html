@@ -1,32 +1,32 @@
 <app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search>
-<main class="bg-gray-900 w-1/2 p-5 mx-auto flex flex-wrap justify-between px-16 py-7 ">
+<main class="style-bg-body">
         <section *ngFor="let films of receiveMovies" class="pt-3 p-4">
-            <div class="overflow-hidden bg-white shadow sm:rounded-lg" *ngIf="searchText === '' || films.title.toLowerCase().includes(searchText)">
+            <div class="card-bg-body" *ngIf="searchText === '' || films.title.toLowerCase().includes(searchText)">
                 <dl> 
-                    <div class="px-4 py-5 sm:px-6"> 
-                        <h3 class="text-lg font-medium leading-6 text-gray-900">{{films.title}}</h3>
+                    <div class="styles-cards"> 
+                        <h3 class="style-text-title">{{films.title}}</h3>
                     </div>
 
-                    <div class="border-t border-gray-200"></div>
+                    <div class="border-card "></div>
 
-                    <div class="bg-gray-50 px-4 py-5 sm:grid-cols-3 sm:gap-4 sm:px-6">
-                        <dt class="text-sm font-medium text-gray-500">Episódios: <span class="mt-1 px-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{films.episode_id}}</span></dt>
+                    <div class="style-first-line-card">
+                        <dt class="style-text-cards-primary">Episódios: <span class="style-text-cards-secondary px-1">{{films.episode_id}}</span></dt>
                     </div>
-                    <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                        <dt class="text-sm font-medium text-gray-500">Resumo: </dt>
-                        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{films.opening_crawl}}</dd>
+                    <div class="style-cards-secondary sm:px-6 ">
+                        <dt class="style-text-cards-primary">Resumo: </dt>
+                        <dd class="style-text-cards-secondary">{{films.opening_crawl}}</dd>
                     </div>
-                    <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                        <dt class="text-sm font-medium text-gray-500">Diretor: </dt>
-                        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{films.director}}</dd>
+                    <div class="styles-cards">
+                        <dt class="style-text-cards-primary">Diretor: </dt>
+                        <dd class="style-text-cards-secondary">{{films.director}}</dd>
                     </div>
-                    <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                        <dt class="text-sm font-medium text-gray-500">Produtor: </dt>
-                        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{films.producer}}</dd>
+                    <div class="style-cards-secondary sm:px-6">
+                        <dt class="style-text-cards-primary">Produtor: </dt>
+                        <dd class="style-text-cards-secondary">{{films.producer}}</dd>
                     </div>
-                    <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                        <dt class="text-sm font-medium text-gray-500">Data de Lançamento: </dt>
-                        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{films.release_date}}</dd>
+                    <div class="styles-cards">
+                        <dt class="style-text-cards-primary">Data de Lançamento: </dt>
+                        <dd class="style-text-cards-secondary">{{films.release_date}}</dd>
                     </div>
                     
                 </dl>

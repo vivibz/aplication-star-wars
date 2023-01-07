@@ -10,7 +10,7 @@ import { ServiceService } from '../shared/services/service.service';
 export class PeopleComponent implements OnInit {
 
 
-  @Output() receivePeople: People[] = [];
+  receivePeople: People[] = [];
   searchText: string = '';
 
   constructor( 

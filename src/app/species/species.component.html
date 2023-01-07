@@ -1,42 +1,42 @@
 <app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search>
-<main class="bg-gray-900 w-3/5 p-4 mx-auto flex flex-wrap justify-between px-16 py-7"> <!--criar class única-->
+<main class="style-bg-body"> 
         <section *ngFor=" let species of receiveSpecies" class="pt-3 p-4">
-            <div class="overflow-hidden bg-white shadow sm:rounded-lg" *ngIf="searchText === '' || species.name.toLowerCase().includes(searchText)">
-                <div class="px-4 py-5 sm:px-6"> 
-                    <h3 class="text-lg font-medium leading-6 text-gray-900">{{species.name}}</h3> <!--PASSAR TUDO PARA O INGLÊS-->
+            <div class="card-bg-body" *ngIf="searchText === '' || species.name.toLowerCase().includes(searchText)">
+                <div class="styles-cards"> 
+                    <h3 class="style-text-title">{{species.name}}</h3> 
                 </div>
-                <div class="border-t border-gray-200"></div>
+                <div class="border-card"></div>
                 <dl> 
-                    <div class="bg-gray-50 px-4 py-5 sm:grid-cols-3 sm:gap-4 sm:px-6">
-                        <dt class="text-sm font-medium text-gray-500">Classification: <span class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{species.classification}}</span></dt>
+                    <div class="style-first-line-card">
+                        <dt class="style-text-cards-primary">Classification: <span class="style-text-cards-secondary px-1">{{species.classification}}</span></dt>
                     </div>
-                    <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                        <dt class="text-sm font-medium text-gray-500">Designation: </dt>
-                        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{species.designation}}</dd>
+                    <div class="style-cards-secondary sm:px-6">
+                        <dt class="style-text-cards-primary">Designation: </dt>
+                        <dd class="style-text-cards-secondary">{{species.designation}}</dd>
                     </div>
-                    <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                        <dt class="text-sm font-medium text-gray-500">Average Height: </dt>
-                        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{species.average_height}}</dd>
+                    <div class="styles-cards">
+                        <dt class="style-text-cards-primary">Average Height: </dt>
+                        <dd class="style-text-cards-secondary">{{species.average_height}}</dd>
                     </div>
-                    <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                        <dt class="text-sm font-medium text-gray-500">Skin Color: </dt>
-                        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{species.skin_colors}}</dd>
+                    <div class="style-cards-secondary sm:px-6">
+                        <dt class="style-text-cards-primary">Skin Color: </dt>
+                        <dd class="style-text-cards-secondary">{{species.skin_colors}}</dd>
                     </div>
-                    <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                        <dt class="text-sm font-medium text-gray-500">Hair Color: </dt>
-                        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{species.hair_colors}}</dd>
+                    <div class="styles-cards">
+                        <dt class="style-text-cards-primary">Hair Color: </dt>
+                        <dd class="style-text-cards-secondary">{{species.hair_colors}}</dd>
                     </div>
-                    <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                        <dt class="text-sm font-medium text-gray-500">Eye Colors: </dt>
-                        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{species.eye_colors}}</dd>
+                    <div class="style-cards-secondary sm:px-6">
+                        <dt class="style-text-cards-primary">Eye Colors: </dt>
+                        <dd class="style-text-cards-secondary">{{species.eye_colors}}</dd>
                     </div>
-                    <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                        <dt class="text-sm font-medium text-gray-500">Average Lifespan: </dt>
-                        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{species.average_lifespan}}</dd>
+                    <div class="styles-cards">
+                        <dt class="style-text-cards-primary">Average Lifespan: </dt>
+                        <dd class="style-text-cards-secondary">{{species.average_lifespan}}</dd>
                     </div>
-                    <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                        <dt class="text-sm font-medium text-gray-500">Language: </dt>
-                        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{species.language}}</dd>
+                    <div class="style-cards-secondary sm:px-6">
+                        <dt class="style-text-cards-primary">Language: </dt>
+                        <dd class="style-text-cards-secondary">{{species.language}}</dd>
                     </div>
                 </dl>
             </div>

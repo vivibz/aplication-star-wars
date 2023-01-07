@@ -1,44 +1,43 @@
 <app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search>
-<main class="bg-gray-900 w-3/5 p-5 mx-auto flex flex-wrap justify-between px-16 py-7 "> <!--criar class única-->
-        <section *ngFor=" let planets of receivePlanets" class="pt-3 p-4">
-            <div class="overflow-hidden bg-white shadow sm:rounded-lg" *ngIf="searchText === '' || planets.name.toLowerCase().includes(searchText)">    
+<main class="style-bg-body "> <!--criar class única-->
+        <section *ngFor=" let planets of receivePlanets" class="pt-3 p-9">
+            <div class="card-bg-body" *ngIf="searchText === '' || planets.name.toLowerCase().includes(searchText)">    
                 <dl> 
-                    <div class="px-4 py-5 sm:px-6"> 
-                        <h3 class="text-lg font-medium leading-6 text-gray-900">{{planets.name}}</h3>
+                    <div class="card-py"> 
+                        <h3 class="style-text-title">{{planets.name}}</h3>
                     </div>
-                    
-                    <div class="border-t border-gray-200"></div>
+                    <div class="border-card"></div>
 
-                    <div class="bg-gray-50 px-4 py-5 sm:grid-cols-3 sm:gap-4 sm:px-6">
-                        <dt class="text-sm font-medium text-gray-500">Rotation Period: <span class="mt-1 text-sm px-1 text-gray-900 sm:col-span-2 sm:mt-0">{{planets.rotation_period}}</span> </dt> 
+                    <div class="style-first-line-card">
+                        <dt class="style-text-cards-primary">Rotation Period: <span class="style-text-cards-secondary px-1">{{planets.rotation_period}}</span> </dt> 
                     </div>
-                    <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                        <dt class="text-sm font-medium text-gray-500">Orbital Period:</dt>
-                        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{planets.orbital_period}}</dd>
+                    <div class="style-cards-secondary sm:px-6">
+                        <dt class="style-text-cards-primary">Orbital Period:</dt>
+                        <dd class="style-text-cards-secondary">{{planets.orbital_period}}</dd>
                     </div>
-                    <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                        <dt class="text-sm font-medium text-gray-500">Diameter: </dt>
-                        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{planets.diameter}}</dd>
+                    <div class="styles-cards">
+                        <dt class="style-text-cards-primary">Diameter: </dt>
+                        <dd class="style-text-cards-secondary">{{planets.diameter}}</dd>
                     </div>
-                    <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                        <dt class="text-sm font-medium text-gray-500">Climate: </dt>
-                        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{planets.climate}}</dd>
+                    <div class="style-cards-secondary sm:px-6">
+                        <dt class="style-text-cards-primary">Climate: </dt>
+                        <dd class="style-text-cards-secondary">{{planets.climate}}</dd>
                     </div>
-                    <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                        <dt class="text-sm font-medium text-gray-500">Gravity: </dt>
-                        <dd class="mt-1 text-xs text-gray-900 sm:col-span-2 sm:mt-0">{{planets.gravity}}</dd>
+                    <div class="styles-cards">
+                        <dt class="style-text-cards-primary">Gravity: </dt>
+                        <dd class="style-text-cards-secondary text-xs">{{planets.gravity}}</dd>
                     </div>
-                    <div class="bg-gray-50 px-2 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-4">
-                        <dt class="text-sm font-medium text-gray-500">Terrain: </dt>
-                        <dd class="mt-1 text-xs text-gray-900 sm:col-span-2 sm:mt-0">{{planets.terrain}}</dd>
+                    <div class="style-cards-secondary sm:px-4"> 
+                        <dt class="style-text-cards-primary">Terrain: </dt>
+                        <dd class="style-text-cards-secondary text-xs">{{planets.terrain}}</dd>
                     </div>
-                    <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                        <dt class="text-sm font-medium text-gray-500">Surface Water: </dt>
-                        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{planets.surface_water}}</dd>
+                    <div class="styles-cards">
+                        <dt class="style-text-cards-primary">Surface Water: </dt>
+                        <dd class="style-text-cards-secondary">{{planets.surface_water}}</dd>
                     </div>
-                    <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                        <dt class="text-sm font-medium text-gray-500">Population: </dt>
-                        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{planets.population}}</dd>
+                    <div class="styles-cards">
+                        <dt class="style-text-cards-primary">Population: </dt>
+                        <dd class="style-text-cards-secondary">{{planets.population}}</dd>
                     </div>
                 </dl>
             </div>
