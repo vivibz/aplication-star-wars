@@ -13,3 +13,7 @@ export interface ResultsPlanets{
 export interface ResultsSpecies{
     results: any[];
 }
+
+// export interface ResultForHome {
+//     results: any[]
+// }

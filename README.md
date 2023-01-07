@@ -23,6 +23,9 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
+## Framework CSS
+Tailwind CSS docs installation (https://tailwindcss.com/docs/installation)
+
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
@@ -30,3 +33,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 # aplication-star-wars
 Ascan final challenge repository for the purpose of consuming the Star Wars API
 >>>>>>> 501b896 (Initial commit)
+
+## Licenses images
+ Image background starry sky: (https://pixabay.com/pt/photos/estrelas-c%C3%A9u-noite-estrelado-1654074/) Imagem de Hans Braxmeier por Pixabay.
+
+## License icons 
+ Icons social networks, open licensed SVG vectors (https://www.svgrepo.com/)
+ Icons home page are from the framework TailwindCSS, page (https://heroicons.com/)
