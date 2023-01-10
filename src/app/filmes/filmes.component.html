@@ -3,7 +3,7 @@
         <section *ngFor="let films of receiveMovies" class="pt-3 p-4">
             <div class="card-bg-body" *ngIf="searchText === '' || films.title.toLowerCase().includes(searchText)">
                 <dl> 
-                    <div class="styles-cards"> 
+                    <div class="styles-cards bg-slate-300"> 
                         <h3 class="style-text-title">{{films.title}}</h3>
                     </div>
 

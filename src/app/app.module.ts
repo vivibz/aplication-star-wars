@@ -12,6 +12,7 @@ import { PlanetsComponent } from './planets/planets.component';
 import { routing } from './app.routing';
 import { SearchComponent } from './search/search.component';
 import { FormsModule } from '@angular/forms';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { FormsModule } from '@angular/forms';
     PeopleComponent,
     PlanetsComponent,
     SearchComponent,
+    FooterComponent,
   
   ],
   imports: [

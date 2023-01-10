@@ -1,4 +1,5 @@
-import { Component, EventEmitter, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +10,12 @@ export class AppComponent implements OnInit {
 
   // searchText: string = '';
 
-   constructor( ) {}
+   constructor( 
+     public router: Router
+   ) {}
 
   ngOnInit(): void {
+    console.log(this.router.url + 'mais')
   }
 
   // onSearchTextEntered(searchValue: string) {

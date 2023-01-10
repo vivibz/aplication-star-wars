@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 body {
-    background: #000;
+    background: #0A0B0B;
+}
+
+.color-page {
+    background: #0A0B0B;
 }
 
 .bg-image {
@@ -13,13 +17,9 @@ body {
 
 @layer components {
 
-    .style-text-navbar {
-        @apply text-gray-400 text-lg font-mono hover:text-2xl hover:text-white px-3 py-2 rounded-2xl 
-    }
-
     /* Cards*/
     .style-bg-body { 
-        @apply bg-gray-900 w-3/5 p-5 mx-auto flex flex-wrap justify-between px-16 py-7
+        @apply color-page w-3/5 p-5 mx-auto flex flex-wrap justify-between px-16 py-7
     }
     .card-bg-body {
         @apply overflow-hidden bg-slate-300 shadow sm:rounded-lg
@@ -55,9 +55,5 @@ body {
         @apply  mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0
     }
    
-
-    /* .icon-search {
-        @apply 
-    } */
 }
 /* You can add global styles to this file, and also import other style files */
