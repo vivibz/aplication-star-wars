@@ -8,7 +8,9 @@ import { PlanetsComponent } from "./planets/planets.component";
 import { SpeciesComponent } from "./species/species.component";
 
 const APP_ROUTES: Routes = [
-    { path: '', component: HomeComponent},
+    { path: 'home', component: HomeComponent},
+    { path: '', redirectTo: '/home', pathMatch: 'full'},
+    // { path: '**', component: PageNotFoundComponent}, //Todo: criar componente 
     { path: 'films', component: FilmesComponent},
     { path: 'species', component: SpeciesComponent},
     { path: 'planets', component: PlanetsComponent},

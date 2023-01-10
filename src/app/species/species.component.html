@@ -2,7 +2,7 @@
 <main class="style-bg-body"> 
         <section *ngFor=" let species of receiveSpecies" class="pt-3 p-4">
             <div class="card-bg-body" *ngIf="searchText === '' || species.name.toLowerCase().includes(searchText)">
-                <div class="styles-cards"> 
+                <div class="styles-cards bg-slate-300"> 
                     <h3 class="style-text-title">{{species.name}}</h3> 
                 </div>
                 <div class="border-card"></div>

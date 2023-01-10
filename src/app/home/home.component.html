@@ -1,8 +1,8 @@
 <app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search>
-<main class="style-bg-body" >
+<main class="style-bg-body">
    <section *ngFor="let card of cards"  class="pt-3 p-9">
     <div class="max-w-sm p-6 bg-slate-300 border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700" *ngIf="searchText === '' || card.title.toLowerCase().includes(searchText)">
-         <img src="{{card.icon}}" alt="" class="h-10">     
+        <img src="{{card.icon}}" alt="" class="h-10">     
          <a routerLink="species">
              <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">{{card.title}}</h5>
          </a>
@@ -10,29 +10,9 @@
          <a routerLink="{{card.link}}" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
              Read more
             <img src="../assets/svg/arrowButtom.svg" alt="" class="w-8 h-4">    
-        </a>  
+        </a> 
+     
         </div>
-   </section>
+       
+    </section>
 </main>
-
-
-
-
-
-
-<!-- <main class="bg-gray-900 w-1/2 p-4 mx-auto h-full ">
-        <section class="flex">
-            <div class="text-slate-300 bg-slate-500 w-1/2 rounded-md ">
-                <h2>species</h2>
-                <p class="mx-2 p-2">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dolor, officia illo, voluptatum numquam quisquam vero repudiandae eaque delectus doloremque unde hic quibusdam praesentium, expedita neque nobis sapiente quia tempora.
-                </p>
-            </div>
-            <div class="text-slate-300 bg-slate-500 w-1/2 rounded-md ml-4">
-                <h2>species</h2>
-                <p class="mx-2 p-2">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dolor, officia illo, voluptatum numquam quisquam vero repudiandae eaque delectus doloremque unde hic quibusdam praesentium, expedita neque nobis sapiente quia tempora.
-                </p>
-            </div>
-        </section>
-</main>  -->

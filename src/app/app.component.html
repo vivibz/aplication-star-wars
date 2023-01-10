@@ -1,30 +1,46 @@
 <div class=" sm:block flex ">
-    <span class=" mx-auto ">
-        <div class="">
-            <img src="../assets/img/star-wars-4.svg" class="mx-auto mt-4 mb-5 sm:max-w-sm md:max-w-sm lg:max-w-xs" >  <!--Corrgir responsividade: imagem só fica respos ao tocar na borda do lado esquerdo []-->
+    <span class="mx-auto md:shrink-0">
+        <div>
+            <img src="../assets/svg/star-wars-4.svg" class="mx-auto mt-4 mb-5 sm:max-w-sm md:max-w-sm lg:max-w-xs" >  <!--Corrgir responsividade: imagem só fica respos ao tocar na borda do lado esquerdo []-->
         </div>
     </span>
+    <i class="flex space-x-7 m-0 top-5 absolute ml-44 p-6 ">
+        <a href="https://www.facebook.com/StarWars" target="_blank">
+            <img src="../assets/svg/facebook-outline-svgrepo-com.svg" alt="facebook" class="h-6 hover:border-2 rounded-lg hover:border-white  ">
+        </a>
+        <a href="https://www.instagram.com/starwars/" target="_blank">
+            <img src="../assets/svg/instagram-outline-svgrepo-com.svg" alt="instagram" class="h-6 hover:border-2 rounded-lg hover:border-white ">
+        </a>
+        <a href="https://www.youtube.com/user/starwars" target="_blank">
+            <img src="../assets/svg/youtube-svgrepo-com.svg" alt="youtube" class="h-6 hover:border-2 rounded-lg hover:border-white">
+        </a>
+        <a href="https://twitter.com/starwars" target="_blank">
+            <img src="../assets/svg/twitter-svgrepo-com.svg" alt="twitter" class="h-6 hover:border-2 rounded-lg hover:border-white">
+        </a>
+    </i>
 </div>
 
-<nav class="bg-black max-h-full py-4 flex-auto" > 
+
+<nav class="color-page max-h-full pt-0 flex-auto" > 
         <ul class="flex justify-center space-x-20  border-b-2 border-gray-500">   <!--adicionar active e focus na nav-bar-->
         <li>
-            <a routerLink="" class="style-text-navbar text-bold focus:inline focus:border-b-inherit focus:border-gray-200">HOME</a>
+            <a routerLink="/home" routerLinkActive="activeLink"  class="style-text-navbar" >HOME</a>
         </li>
         <li>
-            <a routerLink="/species" class="style-text-navbar text-bold">SPECIES</a>
+            <a routerLink="/species" routerLinkActive="activeLink" class="style-text-navbar text-bold">SPECIES</a>
         </li>
         <li>
-            <a routerLink="/films" class="style-text-navbar text-bold">FILMS</a>
+            <a routerLink="/films" routerLinkActive="activeLink" class="style-text-navbar text-bold">FILMS</a>
         </li>
         <li>
-            <a routerLink="/people" class="style-text-navbar text-bold">PEOPLE</a>
+            <a routerLink="/people" routerLinkActive="activeLink" class="style-text-navbar text-bold">PEOPLE</a>
         </li>
         <li>
-            <a routerLink="/planets" class="style-text-navbar text-bold">PLANETS</a>
+            <a routerLink="/planets" routerLinkActive="activeLink" class="style-text-navbar text-bold">PLANETS</a>
         </li>
     </ul> 
 </nav>
 <div class="bg-image">
     <router-outlet></router-outlet>
 </div>
+<app-footer></app-footer>
