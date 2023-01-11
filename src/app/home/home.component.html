@@ -4,8 +4,8 @@
     <div class="border-2 border-gray-500 absolute h-0 w-56 ml-10 mt-10" ></div>
 
     <div *ngFor="let imgFilm of imgFilms" class="space-x-14 pb-1 pr-10 mt-16">
-        <button dialog-trigger="true"
-        data-ripple-light="true"> <img src="{{imgFilm.img}}" alt="" class="h-auto w-auto max-h-60 max-w-56 ml-2"></button>
+        <a href="" class="absolute"></a>
+        <img src="{{imgFilm.img}}" alt="" class="h-auto w-auto max-h-60 max-w-56 ml-2">
         <p class=" text-gray-500 mt-1">{{imgFilm.title}}</p>
    
     </div>
