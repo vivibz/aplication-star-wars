@@ -1,6 +1,25 @@
 <app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search>
 <main class="style-bg-body">
-   <section *ngFor="let card of cards"  class="pt-3 p-9">
+    <p class="text-gray-500 text-2xl font-mono ml-10 mt-2 absolute ">Films</p>
+    <div class="border-2 border-gray-500 absolute h-0 w-56 ml-10 mt-10" ></div>
+
+    <div *ngFor="let imgFilm of imgFilms" class="space-x-14 pb-1 pr-10 mt-16">
+        <button dialog-trigger="true"
+        data-ripple-light="true"> <img src="{{imgFilm.img}}" alt="" class="h-auto w-auto max-h-60 max-w-56 ml-2"></button>
+        <p class=" text-gray-500 mt-1">{{imgFilm.title}}</p>
+   
+    </div>
+
+    <p class="text-gray-500 text-2xl font-mono ml-10 mt-80 absolute ">Peoples</p>
+    <div class="border-2 border-gray-500 absolute h-0 w-56 ml-10 mt-96" ></div>
+
+    <div *ngFor="let imgPeople of imgPeoples" class="space-x-14 pb-1 pr-10 mt-16">
+        <a href=""></a>
+        <img src="{{imgPeople.img}}" alt="" class="h-auto w-auto max-h-60 max-w-56 ml-2">
+        <p class=" text-gray-500">{{imgPeople.title}}</p>
+    </div>
+
+   <section *ngFor="let card of cards"  class="pt-4 p-9 mt-4 ">
     <div class="max-w-sm p-6 bg-slate-300 border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700" *ngIf="searchText === '' || card.title.toLowerCase().includes(searchText)">
         <img src="{{card.icon}}" alt="" class="h-10">     
          <a routerLink="species">
