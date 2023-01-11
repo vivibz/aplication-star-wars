@@ -5,6 +5,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      margin : {
+        '80': '43rem',
+        '96' : '45rem'
+      },
     },
   },
   plugins: [],
