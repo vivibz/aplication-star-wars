@@ -4,7 +4,7 @@
             <img src="../assets/svg/star-wars-4.svg" class="mx-auto mt-4 mb-5 sm:max-w-sm md:max-w-sm lg:max-w-xs" >  <!--Corrgir responsividade: imagem só fica respos ao tocar na borda do lado esquerdo []-->
         </div>
     </span>
-    <i class="flex space-x-7 m-0 top-5 absolute ml-44 p-6 ">
+    <i class="hidden lg:flex space-x-7 m-0 top-5 absolute ml-44 p-6 ">
         <a href="https://www.facebook.com/StarWars" target="_blank">
             <img src="../assets/svg/facebook-outline-svgrepo-com.svg" alt="facebook" class="h-6 hover:border-2 rounded-lg hover:border-white  ">
         </a>
@@ -22,7 +22,7 @@
 
 
 <nav class="color-page max-h-full pt-0 flex-auto" > 
-        <ul class="flex justify-center space-x-20  border-b-2 border-gray-500">   <!--adicionar active e focus na nav-bar-->
+        <ul class="lg:flex hidden justify-center space-x-20  border-b-2 border-gray-500">   <!--adicionar active e focus na nav-bar-->
         <li>
             <a routerLink="/home" routerLinkActive="activeLink"  class="style-text-navbar" >HOME</a>
         </li>
@@ -39,7 +39,27 @@
             <a routerLink="/planets" routerLinkActive="activeLink" class="style-text-navbar text-bold">PLANETS</a>
         </li>
     </ul> 
+    <div class="flex lg:hidden">
+        <button type="button" class="bg-slate-500 inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+            <img src="../assets/svg/bars.svg" alt="" class="w-9 h-9">
+        </button>
+    </div>
+    <div class="lg:hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pt-2 pb-3">
+          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+          <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">HOME</a>
+    
+          <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">SPECIES</a>
+    
+          <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">FILMS</a>
+    
+          <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">PEOPLE</a>
+
+          <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">PLANETS</a>
+        </div>
+      </div>
 </nav>
+ 
 <div class="bg-image">
     <router-outlet></router-outlet>
 </div>

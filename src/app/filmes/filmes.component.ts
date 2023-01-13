@@ -21,14 +21,13 @@ export class FilmesComponent implements OnInit {
     }
   
   getFilms() {
-    this.filmsService.getFilms('films').subscribe( data => {
+    this.filmsService.getFilms().subscribe( data => {
       this.receiveMovies = data.results;
     });
   }
 
   onSearchTextEntered(searchValue: string) {
     this.searchText = searchValue;
-    console.log(this.searchText);
   } 
 
 }

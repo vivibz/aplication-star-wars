@@ -1,17 +1,22 @@
+import { Films } from "./IFilms";
+import { People } from "./IPeople";
+import { Planets } from "./IPlanets";
+import { Species } from "./ISpecies";
+
 export interface ResultsFilms{
-    results: any[];
+    results: Films[];
 }
 
 export interface ResultsPeople{
-    results: any[];
+    results: People[];
 }
 
 export interface ResultsPlanets{
-    results: any[];
+    results: Planets[];
 }
 
 export interface ResultsSpecies{
-    results: any[];
+    results: Species[];
 }
 
 // export interface ResultForHome {
