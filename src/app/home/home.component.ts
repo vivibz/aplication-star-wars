@@ -18,6 +18,8 @@ export class HomeComponent implements OnInit {
     this. getFilms();
   }
 
+  loading = false;
+
   films: Films[] = [];
 
   isShowingModal: boolean = false;
@@ -54,11 +56,16 @@ export class HomeComponent implements OnInit {
   showModal = (film?: Films) => {
     this.isShowingModal = !this.isShowingModal;
     this.imgFilmModal.descriptionModal = film!.opening_crawl;
+    this.imgFilmModal.title = film!.title;
   }
 
+
+
   getFilms() {
+    this.loading = true;
     this._service.getFilms().subscribe( movies => {
       this.films = movies.results;
+      this.loading = false
     })
     
     // if film.title == 'new holpe' {
@@ -84,7 +91,7 @@ export class HomeComponent implements OnInit {
     }
     if (filmTitle == 'Revenge of the Sith') {
       return '../assets/img/revenge-of-the-sith.jpg'
-    }
+    } 
     return ''
   }
 }

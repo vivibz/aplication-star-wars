@@ -9,6 +9,7 @@ import { ServiceService } from '../shared/services/service.service';
 })
 export class PeopleComponent implements OnInit {
 
+  loading = false;
 
   receivePeople: People[] = [];
   searchText: string = '';
@@ -22,8 +23,10 @@ export class PeopleComponent implements OnInit {
   }
 
   getPeople() {
+    this.loading = true;
     this.peopleService.getPeople('people').subscribe(dataPeople =>{
       this.receivePeople = dataPeople.results;
+      this.loading = false;
     })
   }
 
