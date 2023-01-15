@@ -12,6 +12,8 @@ export class SpeciesComponent implements OnInit {
   receiveSpecies: Species[] = [];
   searchText: string = '';
 
+  loading = false;
+
   constructor(
     private speciesService: ServiceService
   ) { }
@@ -21,8 +23,10 @@ export class SpeciesComponent implements OnInit {
   }
 
   getSpecies() {
+    this.loading = true;
     this.speciesService.getSpecies().subscribe( dataSpecies => {
       this.receiveSpecies = dataSpecies.results;
+      this.loading = false;
     })
   }
 

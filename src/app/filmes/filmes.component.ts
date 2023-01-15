@@ -12,6 +12,8 @@ export class FilmesComponent implements OnInit {
   receiveMovies: Films[] = [];
   searchText: string = '';
 
+  loading = false;
+
   constructor( 
     private filmsService: ServiceService
     ) { }
@@ -21,14 +23,15 @@ export class FilmesComponent implements OnInit {
     }
   
   getFilms() {
-    this.filmsService.getFilms('films').subscribe( data => {
+    this.loading = true;
+    this.filmsService.getFilms().subscribe( data => {
       this.receiveMovies = data.results;
+      this.loading = false;
     });
   }
 
   onSearchTextEntered(searchValue: string) {
     this.searchText = searchValue;
-    console.log(this.searchText);
   } 
 
 }

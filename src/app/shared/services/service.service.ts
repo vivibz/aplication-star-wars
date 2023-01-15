@@ -21,7 +21,7 @@ export class ServiceService {
     return this._httpClient.get<ResultsPlanets>(`${API_PATH}/planets`)
   }
   
-  public getFilms(films: string): Observable<ResultsFilms> {
+  public getFilms(): Observable<ResultsFilms> {
     return this._httpClient.get<ResultsFilms>(`${API_PATH}/films`)
   }
 

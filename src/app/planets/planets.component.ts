@@ -12,6 +12,8 @@ export class PlanetsComponent implements OnInit {
   receivePlanets: Planets[] = [];
   searchText: string = '';
 
+  loading = false;
+
   constructor(
     private planetsService : ServiceService
   ) { }
@@ -22,8 +24,10 @@ export class PlanetsComponent implements OnInit {
 
 
   getPlanets(){
+    this.loading = true;
     this.planetsService.getPlanets().subscribe( dataPlanets => {
       this.receivePlanets = dataPlanets.results;
+      this.loading = false;
     })
   }
 

@@ -8,11 +8,11 @@ export interface Card{
 export interface ImgPeople {
   img: string;
   title: string;
-  link: string
+  descriptionModal: string;
 }
 
 export interface ImgFilms {
   img: string;
   title: string;
-  link: string
+  descriptionModal: string;
 }

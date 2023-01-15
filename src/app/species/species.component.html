@@ -1,5 +1,6 @@
 <app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search>
 <main class="style-bg-body"> 
+    <app-loading *ngIf="loading" class="m-auto ml-72"></app-loading>
         <section *ngFor=" let species of receiveSpecies" class="pt-3 p-4">
             <div class="card-bg-body" *ngIf="searchText === '' || species.name.toLowerCase().includes(searchText)">
                 <div class="styles-cards bg-slate-300"> 

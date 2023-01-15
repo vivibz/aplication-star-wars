@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Films } from '../shared/interface/IFilms';
 import { Card, ImgFilms, ImgPeople } from '../shared/interface/IHome';
+import { ServiceService } from '../shared/services/service.service';
 
 
 @Component({
@@ -9,6 +11,19 @@ import { Card, ImgFilms, ImgPeople } from '../shared/interface/IHome';
 })
 export class HomeComponent implements OnInit {
 
+  constructor( private _service : ServiceService
+    ) { }
+
+  ngOnInit(): void {
+    this. getFilms();
+  }
+
+  loading = false;
+
+  films: Films[] = [];
+
+  isShowingModal: boolean = false;
+  infoModalFilms: string = ''
   searchText: string = '';
    cards: Array<Card> = [
     {icon: '../assets/svg/bug.svg', title: 'Do you know what species are in Star Wars?', description: 'Meet 10 important races from the galaxy "far, far away":', link: 'species'},
@@ -22,34 +37,63 @@ export class HomeComponent implements OnInit {
   ]
 
   imgPeoples: Array<ImgPeople> = [
-    {img:'../assets/img/r2-d2.jpg', title:'R2-D2', link: '' },
-    {img: '../assets/img/c-3po.png', title:'C-3po', link: ''},
-    {img: '../assets/img/obi-wan.jpg', title:'Obi-Wan Kenobi', link: ''},
-    {img: '../assets/img/r5-d4.jpg', title:'R5-D4', link: ''},
-    {img: '../assets/img/leia-organa.jpg', title:'Leia Organa', link: ''},
-    {img: '../assets/img/darth-vader.jpg', title: 'Darth Vader', link: ''}, 
+    {img:'../assets/img/r2-d2.jpg', title:'R2-D2', descriptionModal: ''},
+    {img: '../assets/img/c-3po.png', title:'C-3po', descriptionModal: ''},
+    {img: '../assets/img/obi-wan.jpg', title:'Obi-Wan Kenobi', descriptionModal: ''},
+    {img: '../assets/img/r5-d4.jpg', title:'R5-D4', descriptionModal: ''},
+    {img: '../assets/img/leia-organa.jpg', title:'Leia Organa', descriptionModal: ''},
+    {img: '../assets/img/darth-vader.jpg', title: 'Darth Vader', descriptionModal: ''}, 
   ]
 
-  imgFilms: Array<ImgFilms> = [
-    {img:'../assets/img/New-Hope.jpeg', title:'A New Hope', link: '1' },
-    {img: '../assets/img/The_Empire_Strikes_Back.jpg', title:'The Empire Strikes Back', link: '2'},
-    {img: '../assets/img/Return-Of-The-Jedi.jpg', title: 'Return of the Jedi', link: '3'},
-    {img: '../assets/img/phantom-menace.jpg', title:'The Phantom Menace', link: '4'},
-    {img: '../assets/img/attack-of-the-clones.jpg', title:'Attack of the Clones', link: '5'},
-    {img: '../assets/img/revenge-of-the-sith.jpg', title:'Revenge of the Sith', link: '6'}
-  ]
+  imgFilmModal: ImgFilms = {img: '', title: '', descriptionModal: '',}
 
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  
 
   onSearchTextEntered(searchValue: string) {
     this.searchText = searchValue;
   } 
 
+  showModal = (film?: Films) => {
+    this.isShowingModal = !this.isShowingModal;
+    this.imgFilmModal.descriptionModal = film!.opening_crawl;
+    this.imgFilmModal.title = film!.title;
+  }
 
+
+
+  getFilms() {
+    this.loading = true;
+    this._service.getFilms().subscribe( movies => {
+      this.films = movies.results;
+      this.loading = false
+    })
+    
+    // if film.title == 'new holpe' {
+    //   return '../assets/img/New-Hope.jpeg';
+    // }
+  }
+
+  getFilmCover(filmTitle: string) {
+    if (filmTitle == 'A New Hope' ) {
+      return '../assets/img/New-Hope.jpeg' 
+    }
+    if (filmTitle == 'The Empire Strikes Back') {
+      return  '../assets/img/The_Empire_Strikes_Back.jpg'
+    }
+    if (filmTitle == 'Return of the Jedi') {
+      return '../assets/img/Return-Of-The-Jedi.jpg'
+    }
+    if (filmTitle == 'The Phantom Menace') {
+      return '../assets/img/phantom-menace.jpg'
+    }
+    if (filmTitle == 'Attack of the Clones') {
+      return '../assets/img/attack-of-the-clones.jpg'
+    }
+    if (filmTitle == 'Revenge of the Sith') {
+      return '../assets/img/revenge-of-the-sith.jpg'
+    } 
+    return ''
+  }
 }
 
 // interface Card{
